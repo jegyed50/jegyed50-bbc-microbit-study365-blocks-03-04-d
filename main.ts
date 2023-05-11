@@ -17,11 +17,12 @@ let working_text = ""
 let working_time = 0
 let long_rest_time = 0
 let short_rest_time = 0
+led.setBrightness(25)
 short_rest_time = 500
 long_rest_time = 1500
 working_time = 2500
-working_text = "w"
-rest_text = "r"
+working_text = "W"
+rest_text = "R"
 basic.forever(function () {
 	
 })
