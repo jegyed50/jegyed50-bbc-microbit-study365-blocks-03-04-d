@@ -5,19 +5,25 @@
 
 def on_button_pressed_a():
     for index in range(4):
-        basic.show_string("w")
-        basic.pause(2500)
-        basic.show_string("R")
-        basic.pause(500)
-    basic.pause(100)
+        basic.show_string(working_text)
+        basic.pause(working_time)
+        basic.show_string(rest_text)
+        basic.pause(short_rest_time)
+    basic.pause(long_rest_time - short_rest_time)
     basic.clear_screen()
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
+rest_text = ""
+working_text = ""
 working_time = 0
 long_rest_time = 0
 short_rest_time = 0
-working_text="w"
-rest_text ="r"
+led.set_brightness(25)
+short_rest_time = 500
+long_rest_time = 1500
+working_time = 2500
+working_text = "W"
+rest_text = "R"
 
 def on_forever():
     pass
